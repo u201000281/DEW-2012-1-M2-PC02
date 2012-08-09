@@ -1,0 +1,26 @@
+<h1>Listing tweets</h1>
+
+<div class="box_text_content">
+<%= form_for(@tweet, :url => "read_text") do |f| %>
+ 
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Ver mensaje" %>
+  </div>
+<% end %>
+
+
+<%= form_for(@tweet, :url => "read_text") do |f| %>
+ 
+  <div class="actions">
+    <%= f.submit "Listar Status" %>
+  </div>
+<% end %>
+
+
+<%= link_to 'New Tweet', new_tweet_path %>
+
+</div>

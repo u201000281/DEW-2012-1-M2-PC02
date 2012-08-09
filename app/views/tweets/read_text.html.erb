@@ -1,0 +1,7 @@
+<%= @tweet.read_text %>
+<% (session[:tweet] ||= []) %>
+<%  session[:tweet] << [@tweet.read_text] %>
+<%for i in 0..session[:tweet].length%>
+	<%=i%>   <%= session[:tweet][i]%> <br>
+<%end%>
+
